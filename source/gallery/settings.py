@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django_bootstrap5',
     'gallery_app',
     'accounts',
-    'rest_framework'
+    'rest_framework',
+    'api'
 ]
 
 MIDDLEWARE = [
