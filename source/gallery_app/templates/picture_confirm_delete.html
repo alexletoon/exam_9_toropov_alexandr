@@ -7,7 +7,7 @@
         <div class="card-body">
           <h5 class="card-title">Удалить фотографию?</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{picture.description}}</h6>
-          <img src="{{picture.image.url}}" alt="#">
+          <img src="{{picture.image.url}}" class="img-fluid"  alt="pic">
           <form action="" method="POST">
             {% csrf_token %}
             <input type="submit" class="btn btn-primary" value="Да">

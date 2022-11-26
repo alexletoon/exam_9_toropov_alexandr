@@ -37,7 +37,7 @@ class PictureUpdateView(UserPassesTestMixin, UpdateView):
     success_url = '/'
 
     def test_func(self):
-        return self.request.user == self.get_object().author or self.request.user.is_superuser
+        return self.request.user == self.get_object().author or self.request.user.is_superuser or self.request.user.has_perm('gallery_app.change_picture')
 
 
 class PictureDeleteView(UserPassesTestMixin, DeleteView):
@@ -46,7 +46,7 @@ class PictureDeleteView(UserPassesTestMixin, DeleteView):
     success_url = '/'
 
     def test_func(self):
-        return self.request.user == self.get_object().author or self.request.user.is_superuser
+        return self.request.user == self.get_object().author or self.request.user.is_superuser or self.request.user.has_perm('gallery_app.delete_picture')
 
 
 class AddFavoritesView(View):

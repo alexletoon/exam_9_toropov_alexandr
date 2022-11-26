@@ -2,10 +2,33 @@
 
 
 {% block content %}
-<p>Автор {{picture.author}}</p>
-<p>Подпись {{picture.description}}</p>
-<p>Создана {{picture.created_at}}</p>
-<img src="{{picture.image.url}}" alt="#">
-<a href="{% url 'picture_update' picture.pk %}" class="btn btn-primary">Редактировать</a>
-<a href="{% url 'picture_delete' picture.pk %}" class="btn btn-secondary">Удалить</a>
+
+<div class="row">
+    <div class="col-10">
+        <h5>Автор: {{picture.author}}</h5>
+        <p>Подпись: {{picture.description}}</p>
+        <p>Создана: {{picture.created_at}}</p>
+        <img src="{{picture.image.url}}" class="img-thumbnail rounded my-4" alt="new_pic" style="width: 350px; height: 300px;" >
+        <div class="row my-2" >
+            <div class="col-2">
+                {% if user.is_authenticated %}
+                    {% if user == picture.author or user.is_superuser %}
+                <a href="{% url 'picture_update' picture.pk %}" class="btn btn-primary">Редактировать</a>
+                    {% endif %}
+                {% endif %}
+            </div>
+
+            <div class="col-2">
+                {% if user.is_authenticated %}
+                    {% if user == picture.author or user.is_superuser %}
+                        <a href="{% url 'picture_delete' picture.pk %}" class="btn btn-secondary">Удалить</a>
+                    {% endif %}
+                {% endif %}
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
 {% endblock %}
