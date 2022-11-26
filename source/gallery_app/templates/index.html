@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for picture in pictures %}
+<p>Автор {{picture.author}}</p>
+<p>Подпись {{picture.description}}</p>
+<p>Создана {{picture.created_at}}</p>
+<img src="{{picture.image.url}}" alt="#">
+{% endfor %}
+{% endblock %}
