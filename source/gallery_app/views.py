@@ -55,5 +55,7 @@ class AddFavoritesView(View):
         user = self.request.user
         if not User.objects.filter(favorite_pics=picture).exists():
             user.favorite_pics.add(picture)
+        else: 
+            user.favorite_pics.remove(picture)
         return redirect('index_view')
 
