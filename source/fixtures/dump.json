@@ -9,6 +9,7 @@
     "updated_at": "2022-11-26T09:43:21.144Z",
     "author": 1,
     "favorites": [
+      1,
       2
     ]
   }
@@ -20,9 +21,10 @@
     "image": "gallery_pics/samsung.jpeg",
     "description": "2nd pic",
     "created_at": "2022-11-26T06:26:14.261Z",
-    "updated_at": "2022-11-26T09:43:26.719Z",
+    "updated_at": "2022-11-26T12:19:13.987Z",
     "author": 1,
     "favorites": [
+      1,
       2
     ]
   }
@@ -43,18 +45,6 @@
 },
 {
   "model": "gallery_app.picture",
-  "pk": 6,
-  "fields": {
-    "image": "gallery_pics/funny-wet-cats-coverimage_ATLxMjG.jpeg",
-    "description": "New pic",
-    "created_at": "2022-11-26T09:38:49.319Z",
-    "updated_at": "2022-11-26T09:43:31.324Z",
-    "author": 2,
-    "favorites": []
-  }
-},
-{
-  "model": "gallery_app.picture",
   "pk": 7,
   "fields": {
     "image": "gallery_pics/Screenshot_at_Oct_01_15-19-01.png",
@@ -62,9 +52,7 @@
     "created_at": "2022-11-26T09:39:20.007Z",
     "updated_at": "2022-11-26T09:39:20.007Z",
     "author": 1,
-    "favorites": [
-      2
-    ]
+    "favorites": []
   }
 },
 {
