@@ -1,0 +1,84 @@
+[
+{
+  "model": "gallery_app.picture",
+  "pk": 1,
+  "fields": {
+    "image": "gallery_pics/download.jpeg",
+    "description": "Новая пикча",
+    "created_at": "2022-11-26T06:25:29.255Z",
+    "updated_at": "2022-11-26T09:43:21.144Z",
+    "author": 1,
+    "favorites": [
+      2
+    ]
+  }
+},
+{
+  "model": "gallery_app.picture",
+  "pk": 2,
+  "fields": {
+    "image": "gallery_pics/samsung.jpeg",
+    "description": "2nd pic",
+    "created_at": "2022-11-26T06:26:14.261Z",
+    "updated_at": "2022-11-26T09:43:26.719Z",
+    "author": 1,
+    "favorites": [
+      2
+    ]
+  }
+},
+{
+  "model": "gallery_app.picture",
+  "pk": 5,
+  "fields": {
+    "image": "gallery_pics/images_ge1mINt.jpeg",
+    "description": "котяра",
+    "created_at": "2022-11-26T08:02:31.286Z",
+    "updated_at": "2022-11-26T08:19:21.540Z",
+    "author": 2,
+    "favorites": [
+      1
+    ]
+  }
+},
+{
+  "model": "gallery_app.picture",
+  "pk": 6,
+  "fields": {
+    "image": "gallery_pics/funny-wet-cats-coverimage_ATLxMjG.jpeg",
+    "description": "New pic",
+    "created_at": "2022-11-26T09:38:49.319Z",
+    "updated_at": "2022-11-26T09:43:31.324Z",
+    "author": 2,
+    "favorites": []
+  }
+},
+{
+  "model": "gallery_app.picture",
+  "pk": 7,
+  "fields": {
+    "image": "gallery_pics/Screenshot_at_Oct_01_15-19-01.png",
+    "description": "Code",
+    "created_at": "2022-11-26T09:39:20.007Z",
+    "updated_at": "2022-11-26T09:39:20.007Z",
+    "author": 1,
+    "favorites": [
+      2
+    ]
+  }
+},
+{
+  "model": "gallery_app.picture",
+  "pk": 8,
+  "fields": {
+    "image": "gallery_pics/Screenshot_at_Oct_22_21-20-41.png",
+    "description": "mistake",
+    "created_at": "2022-11-26T09:42:18.302Z",
+    "updated_at": "2022-11-26T09:42:18.302Z",
+    "author": 1,
+    "favorites": [
+      2
+    ]
+  }
+}
+]
