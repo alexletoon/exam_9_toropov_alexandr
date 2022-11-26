@@ -5,6 +5,13 @@
 <p>Автор {{picture.author}}</p>
 <p>Подпись {{picture.description}}</p>
 <p>Создана {{picture.created_at}}</p>
-<img src="{{picture.image.url}}" alt="#">
+<a href="{% url 'picture_detail' picture.pk %}">
+    <img src="{{picture.image.url}}" alt="#">
+</a>
+<form action="{% url 'picture_favorites' picture.pk %}" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-secondary btn-sm mr-5">Добавить в избранное</button>
+</form>
+
 {% endfor %}
 {% endblock %}

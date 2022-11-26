@@ -20,7 +20,17 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-
+                  {% if user.is_authenticated %}
+                      <form action="{% url 'logout' %}" method="POST">
+                        {% csrf_token %}
+                        <input class="nav-link" type="submit" value="Выйти">
+                      </form>
+                      <a class="nav-link" href="{% url 'user_page' user.pk %}">Личный кабинет</a>
+                  {% else %}
+                      <a class="nav-link" href="{% url 'login' %} ">Войти</a>
+                      <a class="nav-link" href="{% url 'register' %} ">Зарегистрироваться</a>
+                  {% endif %}
+                    <a class="nav-link" href="{% url 'picture_add' %}">Добавить фото</a>
                 {% block menu %}{% endblock %}
                 </div>
               </div>
