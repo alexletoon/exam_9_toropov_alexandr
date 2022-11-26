@@ -9,24 +9,6 @@ from django.http import JsonResponse
 
 
 
-# class AddToFavoritesView(APIView):
-   
-#     def patch(self, request, *args, **kwargs):
-#         picture = get_object_or_404(Picture, pk=kwargs.get('get'))
-#         user = self.request.user
-#         serializer = PictureSerializer(picture.favorites, data=user)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data)
-#         return Response(serializer.errors, status=400)
-
-    
-#     def get(self, request, *args, **kwargs):
-#         picture = get_object_or_404(Picture, pk=kwargs.get('pk'))
-#         serializer = PictureSerializer(picture)
-#         return Response(serializer.data)
-
-
 class PicturesAPI(ModelViewSet):
     model = Picture
     serializer_class = PictureSerializer
